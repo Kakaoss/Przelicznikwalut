@@ -24,5 +24,10 @@ namespace Przelicznikwalut
         {
             InitializeComponent();
         }
+
+        private void Konwertuj_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

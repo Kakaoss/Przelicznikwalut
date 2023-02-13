@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Przelicznikwalut"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="MainWindow" Height="230" Width="691">
+    <Grid Margin="0,0,0,-6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Kwota: "/>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="IloscTextBox"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Z"/>
+        <ComboBox Grid.Row="1" Grid.Column="1" Name="ZComboBox">
+            <ComboBoxItem>Złoty</ComboBoxItem>
+            <ComboBoxItem>Dolar</ComboBoxItem>
+            <ComboBoxItem>Funt</ComboBoxItem>
+        </ComboBox>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Do"/>
+        <ComboBox Grid.Row="2" Grid.Column="1">
+            <ComboBoxItem>Złoty</ComboBoxItem>
+            <ComboBoxItem>Dolar</ComboBoxItem>
+            <ComboBoxItem>Funt</ComboBoxItem>
+        </ComboBox>
+        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Name="Konwertuj" Content="Konwertuj" Click="Konwertuj_Click"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Przeliczona kwota : "/>
+        <TextBlock Grid.Row="4" Grid.Column="1" Name="Przeliczonakwota"/>
     </Grid>
 </Window>
